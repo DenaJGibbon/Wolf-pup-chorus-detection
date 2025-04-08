@@ -34,9 +34,9 @@ MFCCpups_filtered$type <- as.factor(MFCCpups_filtered$type)
 
 # HaMFCCpups_filtered# Handle any potential NAs that may have been introduced during the conversion process (if any)
 # You can choose to remove rows with NAs or impute them based on your analysis needs.
-if(any(is.na(MFCCpups_filtered))) {
-  MFCCpups_filtered <- na.omit(MFCCpups_filtered)  # Remove rows with NAs
-}
+# if(any(is.na(MFCCpups_filtered))) {
+#   MFCCpups_filtered <- na.omit(MFCCpups_filtered)  # Remove rows with NAs
+# }
 
 # Set a seed for reproducibility
 set.seed(0)
