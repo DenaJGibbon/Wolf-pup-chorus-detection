@@ -31,7 +31,7 @@ pups_segments_MFCC_DF$Class  <- case_when(
 head(pups_segments_MFCC_DF)
 
 # List all .WAV files in the 'segmentswolves' directory
-FullWavNames <- list.files('data/segmentswolves/',
+FullWavNames <- list.files('/Users/denaclink/Downloads/wolfchorus/',
                            pattern = '.WAV', full.names = TRUE)
 
 # Extract short names from full file paths (remove the .WAV extension)
@@ -56,6 +56,7 @@ for(i in 1:length(UniqueRecording)){
     # Define segment start times (5-second intervals)
     SegmentSequence <- seq(0, (nrow(SingleRecordingSubset) * 5 + 5), 5)
 
+    duration( TempWav)
     # Loop through each segment and extract the corresponding audio clip
     for(j in 1:nrow(SingleRecordingSubset)){
       # Cut the segment from the full WAV file
