@@ -51,7 +51,7 @@ colnames(TrainingData)
 
 # Build a random forest model using the training data
 ml.model.rf.mfcc.original <- randomForest::randomForest(
-  x = TrainingData[, -c(1:3,181:183)],
+  x = TrainingData[, -c(1:3,180:183)],
   y = TrainingData$type,         # Target variable is 'type' (Pups or NoPups)
   ntree = 1000,                   # Number of trees in the random forest
   random_state = 0,
